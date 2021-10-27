@@ -2,17 +2,18 @@ import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { RFPercentage } from 'react-native-responsive-fontsize';
-import OTPInputView from '@twotalltotems/react-native-otp-input'
 
 //components
 import Screen from './../components/Screen';
 
 //config
 import Colors from '../config/Colors';
+import OtpInputs from '../components/OtpInputs';
 
 function OtpScreens(props) {
 
     const [fullText, setFullText] = useState(false);
+    const [otp, setOtp] = useState();
 
     return (
         <Screen style={{ flex: 1, justifyContent: 'flex-start', alignItems: "center", backgroundColor: Colors.white }}>
@@ -33,7 +34,8 @@ function OtpScreens(props) {
                 </Text>
             </View>
 
-            {/* Otp Input */}
+            <OtpInputs getOtp={(otp) => setOtp(otp)} />
+            {/* Otp Input
             <OTPInputView
                 style={{ width: '80%', height: RFPercentage(20) }}
                 pinCount={6}
@@ -50,7 +52,7 @@ function OtpScreens(props) {
                     color: fullText ? "#ff0000" : Colors.primary
                 }}
                 codeInputHighlightStyle={styles.underlineStyleHighLighted}
-            />
+            /> */}
         </Screen>
     );
 }
