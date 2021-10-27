@@ -5,72 +5,84 @@ import { RFPercentage } from 'react-native-responsive-fontsize';
 
 //components
 import Screen from './../components/Screen';
+import InputField from './../components/InputField';
 
 //config
 import Colors from '../config/Colors';
-import OtpInputs from '../components/OtpInputs';
 
 function OtpScreens(props) {
 
-    const [fullText, setFullText] = useState(false);
-    const [otp, setOtp] = useState();
+    const [inputField, SetInputField] = useState([
+        {
+            placeholder: "1",
+            value: "",
+        },
+        {
+            placeholder: "2",
+            value: "",
+        },
+        {
+            placeholder: "3",
+            value: "",
+        },
+        {
+            placeholder: "4",
+            value: "",
+        },
+        {
+            placeholder: "5",
+            value: "",
+        },
+        {
+            placeholder: "6",
+            value: "",
+        },
+    ]);
+
+    const handleChange = (text, i) => {
+        let tempfeilds = [...inputField];
+        tempfeilds[i].value = text;
+        SetInputField(tempfeilds);
+
+    };
 
     return (
-        <Screen style={{ flex: 1, justifyContent: 'flex-start', alignItems: "center", backgroundColor: Colors.white }}>
 
+        <Screen style={{ flex: 1, justifyContent: 'flex-start', alignItems: "center", backgroundColor: Colors.white }}>
             {/* Back Icon */}
             <TouchableOpacity style={{ position: 'absolute', left: RFPercentage(4), top: RFPercentage(7) }}>
                 <Ionicons name="chevron-back" style={{ fontSize: RFPercentage(3.5) }} color={Colors.primary} />
             </TouchableOpacity>
 
             <View style={{ marginTop: RFPercentage(20), justifyContent: 'center', alignItems: 'center' }}>
-
-                {fullText ? <Text style={{ color: "#ff0000", fontSize: RFPercentage(2.5) }}>
+                {/* {fullText ? <Text style={{ color: "#ff0000", fontSize: RFPercentage(2.5) }}>
                     Pin is incorrect
-                </Text> : null}
-
+                </Text> : null} */}
                 <Text style={{ marginTop: RFPercentage(7), fontSize: RFPercentage(3.5), color: Colors.primary, fontWeight: 'bold' }}>
                     Enter Pin
                 </Text>
             </View>
+            <View style={{ flexDirection: 'row' }}>
+                {inputField.map((item, i) => (
+                    <View key={i} style={{ marginTop: RFPercentage(2) }} >
+                        <InputField
+                            backgroundColor={Colors.inputFieldBackgroundColor}
+                            borderColor={"#E3E5E5"}
+                            borderWidth={0}
+                            borderRadius={RFPercentage(1)}
+                            fontSize={RFPercentage(2.3)}
+                            handleFeild={(text) => handleChange(text, i)}
+                            value={item.value}
+                            width={"30%"}
+                        />
+                    </View>
+                ))}
 
-            <OtpInputs getOtp={(otp) => setOtp(otp)} />
-            {/* Otp Input
-            <OTPInputView
-                style={{ width: '80%', height: RFPercentage(20) }}
-                pinCount={6}
-                onCodeFilled={() => setFullText(true)}
-                secureTextEntry={true}
-                placeholderTextColor={"black"}
-                autoFocusOnLoad
-                codeInputFieldStyle={{
-                    width: 30,
-                    height: 45,
-                    borderWidth: 0,
-                    borderBottomWidth: 1,
-                    fontSize: RFPercentage(3.5),
-                    color: fullText ? "#ff0000" : Colors.primary
-                }}
-                codeInputHighlightStyle={styles.underlineStyleHighLighted}
-            /> */}
+            </View>
+
+
         </Screen>
     );
 }
-
-const styles = StyleSheet.create({
-    borderStyleBase: {
-        width: 30,
-        height: 45
-    },
-
-    borderStyleHighLighted: {
-        borderColor: "#03DAC6",
-    },
-
-    underlineStyleHighLighted: {
-        borderColor: Colors.primary,
-    },
-
-});
 
 export default OtpScreens;
