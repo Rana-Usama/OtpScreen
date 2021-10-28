@@ -6,6 +6,8 @@ import { Ionicons } from '@expo/vector-icons';
 //components
 import Screen from './../components/Screen';
 import MyAppButton from './../components/common/MyAppButton';
+import { LinearGradient } from 'expo-linear-gradient';
+
 //config
 import Colors from '../config/Colors';
 

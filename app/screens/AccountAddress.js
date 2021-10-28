@@ -26,11 +26,14 @@ function AccountAddress(props) {
             </View>
 
             {/* Center view */}
-            <View style={{ marginTop: RFPercentage(20), width: "80%", justifyContent: 'flex-start', alignItems: 'center', backgroundColor: Colors.lightGrey, height: RFPercentage(24), borderRadius: RFPercentage(3) }}>
-                <View style={{ width: '90%', marginTop: RFPercentage(7) }}>
-                    <Text style={{ color: Colors.black, fontSize: RFPercentage(2) }}>
-                        0x2C8A946E800719602DA0201BCEFD2423a81B6771
-                    </Text>
+            <View style={{ marginTop: RFPercentage(20), width: "80%", justifyContent: 'center', alignItems: 'center', backgroundColor: Colors.white, height: RFPercentage(26), borderRadius: RFPercentage(3) }}>
+
+                <View style={{ width: "99%", justifyContent: 'flex-start', alignItems: 'center', backgroundColor: Colors.lightGrey, height: RFPercentage(25.6), borderRadius: RFPercentage(3) }}>
+                    <View style={{ width: '90%', marginTop: RFPercentage(7) }}>
+                        <Text style={{ color: Colors.black, fontSize: RFPercentage(2) }}>
+                            0x2C8A946E800719602DA0201BCEFD2423a81B6771
+                        </Text>
+                    </View>
                 </View>
             </View>
 
@@ -48,7 +51,7 @@ function AccountAddress(props) {
                     padding={RFPercentage(2.5)}
                     bold={true}
                     borderradius={RFPercentage(20)}
-                    backgroundColor={"#133FDB"}
+                    backgroundColor={Colors.darkBlue}
                     color={Colors.white}
                     width={"70%"}
                 />
