@@ -14,6 +14,7 @@ import { Rubik_500Medium, Rubik_400Regular, useFonts } from "@expo-google-fonts/
 //config
 import Colors from './app/config/Colors';
 import PinSuccessScreen from './app/screens/PinSuccessScreen';
+import ContactSupportScreen from './app/screens/ContactSupportScreen';
 
 const Stack = createStackNavigator();
 
@@ -30,8 +31,9 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator headerMode="none" initialRouteName="PinSuccessScreen">
+      <Stack.Navigator headerMode="none" initialRouteName="ContactSupportScreen">
         <Stack.Screen name="OtpScreens" component={OtpScreens} />
+        <Stack.Screen name="ContactSupportScreen" component={ContactSupportScreen} />
         <Stack.Screen name="PinSuccessScreen" component={PinSuccessScreen} />
         <Stack.Screen name="AccountAddress" component={AccountAddress} />
       </Stack.Navigator>
