@@ -9,17 +9,19 @@ import OtpScreens from './app/screens/OtpScreens';
 import AccountAddress from './app/screens/AccountAddress';
 
 //custom fonts
-import { Rubik_500Medium, useFonts } from "@expo-google-fonts/rubik"
+import { Rubik_500Medium, Rubik_400Regular, useFonts } from "@expo-google-fonts/rubik"
 
 //config
 import Colors from './app/config/Colors';
+import PinSuccessScreen from './app/screens/PinSuccessScreen';
 
 const Stack = createStackNavigator();
 
 export default function App() {
 
   const [fontsLoaded] = useFonts({
-    Rubik_500Medium
+    Rubik_500Medium,
+    Rubik_400Regular
   })
 
   if (!fontsLoaded) return <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }} >
@@ -28,8 +30,9 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator headerMode="none" initialRouteName="AccountAddress">
+      <Stack.Navigator headerMode="none" initialRouteName="PinSuccessScreen">
         <Stack.Screen name="OtpScreens" component={OtpScreens} />
+        <Stack.Screen name="PinSuccessScreen" component={PinSuccessScreen} />
         <Stack.Screen name="AccountAddress" component={AccountAddress} />
       </Stack.Navigator>
     </NavigationContainer>
