@@ -1,11 +1,38 @@
 import React from 'react';
+import { ActivityIndicator, View } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
+import { RFPercentage } from 'react-native-responsive-fontsize';
 
 //screen
 import OtpScreens from './app/screens/OtpScreens';
+import AccountAddress from './app/screens/AccountAddress';
+
+//custom fonts
+import { Rubik_500Medium, useFonts } from "@expo-google-fonts/rubik"
+
+//config
+import Colors from './app/config/Colors';
+
+const Stack = createStackNavigator();
 
 export default function App() {
+
+  const [fontsLoaded] = useFonts({
+    Rubik_500Medium
+  })
+
+  if (!fontsLoaded) return <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }} >
+    <ActivityIndicator size={RFPercentage(6)} color={Colors.primary} />
+  </View>
+
   return (
-    <OtpScreens />
+    <NavigationContainer>
+      <Stack.Navigator headerMode="none" initialRouteName="AccountAddress">
+        <Stack.Screen name="OtpScreens" component={OtpScreens} />
+        <Stack.Screen name="AccountAddress" component={AccountAddress} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 

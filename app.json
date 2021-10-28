@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "OtpScreens",
-    "slug": "OtpScreens",
+    "name": "Currency",
+    "slug": "Currency",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
