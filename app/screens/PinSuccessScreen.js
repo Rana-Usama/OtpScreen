@@ -13,7 +13,7 @@ import Colors from '../config/Colors';
 
 function PinSuccessScreen(props) {
     return (
-        <Screen style={{ flex: 1, justifyContent: 'center', alignItems: "center", backgroundColor: "#E5E5E5" }}>
+        <Screen statusBarColor="#E5E5E5" style={{ flex: 1, justifyContent: 'center', alignItems: "center", backgroundColor: "#E5E5E5" }}>
 
             <View style={{ justifyContent: 'center', alignItems: 'center', marginTop: RFPercentage(-5) }}>
                 {/* Success Image */}
@@ -36,7 +36,6 @@ function PinSuccessScreen(props) {
             <View style={{ width: '100%', position: 'absolute', bottom: RFPercentage(6) }}>
                 <MyAppButton
                     title="Okay"
-                    padding={RFPercentage(2.5)}
                     bold={true}
                     borderradius={RFPercentage(20)}
                     backgroundColor={"#133FDB"}

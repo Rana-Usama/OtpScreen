@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text } from 'react-native'
+import { View, Text, TouchableOpacity } from 'react-native'
 import { RFPercentage } from 'react-native-responsive-fontsize';
 import { Ionicons } from '@expo/vector-icons';
 
@@ -7,18 +7,18 @@ import { Ionicons } from '@expo/vector-icons';
 import Screen from './../components/Screen';
 //config
 import Colors from '../config/Colors';
-import { TouchableOpacity } from 'react-native-gesture-handler';
 import MyAppButton from './../components/common/MyAppButton';
 
 function AccountAddress(props) {
     return (
-        <Screen style={{ flex: 1, justifyContent: 'flex-start', alignItems: "center", backgroundColor: "#E5E5E5" }}>
+        <Screen statusBarColor="#E5E5E5" style={{ flex: 1, justifyContent: 'flex-start', alignItems: "center", backgroundColor: "#E5E5E5" }}>
 
             {/* Nav */}
             <View style={{ width: '100%', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginTop: RFPercentage(2) }}>
 
                 {/* Back Icon */}
                 <Ionicons name="chevron-back" style={{ fontSize: RFPercentage(3.2), position: 'absolute', left: RFPercentage(2) }} color={Colors.darkBlue} />
+
                 {/* Heading */}
                 <Text style={{ color: "#333333", fontSize: RFPercentage(2.5), fontFamily: 'Rubik_500Medium' }}>
                     Account Address
@@ -27,7 +27,6 @@ function AccountAddress(props) {
 
             {/* Center view */}
             <View style={{ marginTop: RFPercentage(20), width: "80%", justifyContent: 'center', alignItems: 'center', backgroundColor: Colors.white, height: RFPercentage(26), borderRadius: RFPercentage(3) }}>
-
                 <View style={{ width: "99%", justifyContent: 'flex-start', alignItems: 'center', backgroundColor: Colors.lightGrey, height: RFPercentage(25.6), borderRadius: RFPercentage(3) }}>
                     <View style={{ width: '90%', marginTop: RFPercentage(7) }}>
                         <Text style={{ color: Colors.black, fontSize: RFPercentage(2) }}>
@@ -48,7 +47,6 @@ function AccountAddress(props) {
             <View style={{ width: '100%', position: 'absolute', bottom: RFPercentage(6) }}>
                 <MyAppButton
                     title="Okay"
-                    padding={RFPercentage(2.5)}
                     bold={true}
                     borderradius={RFPercentage(20)}
                     backgroundColor={Colors.darkBlue}

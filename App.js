@@ -32,7 +32,7 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator headerMode="none" initialRouteName="AccountAddress">
+      <Stack.Navigator headerMode="none" initialRouteName="PinSuccessScreen">
         <Stack.Screen name="OtpScreens" component={OtpScreens} />
         <Stack.Screen name="HelpScreen" component={HelpScreen} />
         <Stack.Screen name="ContactSupportScreen" component={ContactSupportScreen} />
