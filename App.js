@@ -7,6 +7,7 @@ import { RFPercentage } from 'react-native-responsive-fontsize';
 //screen
 import OtpScreens from './app/screens/OtpScreens';
 import AccountAddress from './app/screens/AccountAddress';
+import HelpScreen from './app/screens/HelpScreen';
 
 //custom fonts
 import { Rubik_500Medium, Rubik_400Regular, useFonts } from "@expo-google-fonts/rubik"
@@ -31,8 +32,9 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator headerMode="none" initialRouteName="ContactSupportScreen">
+      <Stack.Navigator headerMode="none" initialRouteName="HelpScreen">
         <Stack.Screen name="OtpScreens" component={OtpScreens} />
+        <Stack.Screen name="HelpScreen" component={HelpScreen} />
         <Stack.Screen name="ContactSupportScreen" component={ContactSupportScreen} />
         <Stack.Screen name="PinSuccessScreen" component={PinSuccessScreen} />
         <Stack.Screen name="AccountAddress" component={AccountAddress} />

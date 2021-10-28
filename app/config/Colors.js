@@ -9,5 +9,6 @@ export default {
     black: "black",
     lightBlue: '#C0FAEB',
     warn: "#ba4848",
-    lightGrey: '#F3EBFC'
+    lightGrey: '#F3EBFC',
+    line: '#444444'
 };
