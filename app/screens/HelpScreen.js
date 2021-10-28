@@ -7,7 +7,6 @@ import { Ionicons } from '@expo/vector-icons';
 import Screen from './../components/Screen';
 //config
 import Colors from '../config/Colors';
-import { Rubik_500Medium } from '@expo-google-fonts/rubik';
 
 
 const { height } = Dimensions.get("window");
