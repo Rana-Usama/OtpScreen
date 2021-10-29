@@ -6,7 +6,7 @@ import { Ionicons } from '@expo/vector-icons';
 //components
 import Screen from './../components/Screen';
 //config
-import Colors from '../config/Colors';
+import theme from '../config/theme';
 import { LinearGradient } from 'expo-linear-gradient';
 
 
@@ -53,13 +53,13 @@ function HelpScreen(props) {
             {Data.map((item, i) => (
 
                 <View key={i} style={{ marginTop: i === 0 ? RFPercentage(10) : RFPercentage(3), width: '100%', justifyContent: 'center', alignItems: 'flex-start' }}>
-                    <View style={{ width: '100%', height: 0.3, backgroundColor: Colors.line }} />
+                    <View style={{ width: '100%', height: 0.3, backgroundColor: theme.line }} />
                     <TouchableOpacity onPress={() => i === 1 ? setPickerModel(true) : null} activeOpacity={0.7}>
-                        <Text style={{ marginTop: RFPercentage(2.6), marginLeft: RFPercentage(6), color: Colors.darkBlue, fontSize: RFPercentage(2.6), fontFamily: 'Rubik_400Regular' }}>
+                        <Text style={{ marginTop: RFPercentage(2.6), marginLeft: RFPercentage(6), color: theme.darkBlue, fontSize: RFPercentage(2.6), fontFamily: 'Rubik_400Regular' }}>
                             {item.title}
                         </Text>
                     </TouchableOpacity>
-                    {i === 4 ? <View style={{ width: '100%', height: 0.3, backgroundColor: Colors.line, marginTop: RFPercentage(3) }} />
+                    {i === 4 ? <View style={{ width: '100%', height: 0.3, backgroundColor: theme.line, marginTop: RFPercentage(3) }} />
                         : null}
                 </View>
             ))}
@@ -86,7 +86,7 @@ function HelpScreen(props) {
                         </View>
 
                         <TouchableOpacity onPress={() => setPickerModel(false)} activeOpacity={0.8} style={{ marginTop: RFPercentage(4) }}>
-                            <Text style={{ color: Colors.darkBlue, fontSize: RFPercentage(2.4), fontFamily: 'Rubik_500Medium' }}>
+                            <Text style={{ color: theme.darkBlue, fontSize: RFPercentage(2.4), fontFamily: 'Rubik_500Medium' }}>
                                 Dismiss
                             </Text>
                         </TouchableOpacity>

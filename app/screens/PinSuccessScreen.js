@@ -9,7 +9,7 @@ import MyAppButton from './../components/common/MyAppButton';
 import { LinearGradient } from 'expo-linear-gradient';
 
 //config
-import Colors from '../config/Colors';
+import theme from '../config/theme';
 
 function PinSuccessScreen(props) {
     return (
@@ -18,7 +18,7 @@ function PinSuccessScreen(props) {
             <View style={{ justifyContent: 'center', alignItems: 'center', marginTop: RFPercentage(-5) }}>
                 {/* Success Image */}
                 <Image style={{ width: RFPercentage(6), height: RFPercentage(6) }} source={require('../../assets/images/tick.png')} />
-                <Text style={{ color: Colors.darkBlue, marginTop: RFPercentage(2), fontSize: RFPercentage(2.6), fontFamily: "Rubik_500Medium" }}>
+                <Text style={{ color: theme.darkBlue, marginTop: RFPercentage(2), fontSize: RFPercentage(2.6), fontFamily: "Rubik_500Medium" }}>
                     Success
                 </Text>
             </View>
@@ -39,7 +39,7 @@ function PinSuccessScreen(props) {
                     bold={true}
                     borderradius={RFPercentage(20)}
                     backgroundColor={"#133FDB"}
-                    color={Colors.white}
+                    color={theme.white}
                     width={"70%"}
                 />
             </View>

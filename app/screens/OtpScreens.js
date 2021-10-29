@@ -7,7 +7,7 @@ import { RFPercentage } from 'react-native-responsive-fontsize';
 import Screen from './../components/Screen';
 
 //config
-import Colors from '../config/Colors';
+import theme from '../config/theme';
 
 function OtpScreens(props) {
     const ref_input2 = useRef();
@@ -63,79 +63,79 @@ function OtpScreens(props) {
         <Screen style={{ flex: 1, justifyContent: 'flex-start', alignItems: "center", backgroundColor: "#F2F0F0" }}>
             {/* Back Icon */}
             <TouchableOpacity style={{ position: 'absolute', left: RFPercentage(4), top: RFPercentage(7) }}>
-                <Ionicons name="chevron-back" style={{ fontSize: RFPercentage(3.5) }} color={Colors.primary} />
+                <Ionicons name="chevron-back" style={{ fontSize: RFPercentage(3.5) }} color={theme.primary} />
             </TouchableOpacity>
 
             <View style={{ marginTop: RFPercentage(5), justifyContent: 'center', alignItems: 'center' }}>
                 {
                     warn ?
-                        <Text style={{ marginTop: RFPercentage(7), fontSize: RFPercentage(2.5), color: Colors.warn }}>
+                        <Text style={{ marginTop: RFPercentage(7), fontSize: RFPercentage(2.5), color: theme.warn }}>
                             PINs do not match
                         </Text> : null
                 }
             </View>
 
             <View style={{ justifyContent: 'center', alignItems: 'center' }}>
-                <Text style={{ marginTop: warn ? RFPercentage(7) : RFPercentage(16), fontSize: RFPercentage(3.5), color: Colors.primary, fontWeight: 'bold' }}>
+                <Text style={{ marginTop: warn ? RFPercentage(7) : RFPercentage(16), fontSize: RFPercentage(3.5), color: theme.primary, fontWeight: 'bold' }}>
                     {warn ? "Confirm New PIN" : "Enter Old PIN"}
                 </Text>
             </View>
             <View style={{ flexDirection: 'row', marginTop: RFPercentage(2) }}>
                 {/* First input */}
                 <View style={{ marginTop: RFPercentage(2), marginRight: RFPercentage(1.3), alignItems: "center", justifyContent: "center", flexDirection: "row", width: RFPercentage(6), height: RFPercentage(6.9), marginVertical: RFPercentage(0.7), borderRadius: RFPercentage(1) }} >
-                    <Text style={{ color: warn ? 'red' : Colors.black, fontSize: RFPercentage(5) }}>
+                    <Text style={{ color: warn ? 'red' : theme.black, fontSize: RFPercentage(5) }}>
                         {(value[0] === "" || value[0] === undefined) ? "" : "*"}
                     </Text>
                 </View>
                 {/* second input */}
                 <View style={{ marginTop: RFPercentage(2), marginRight: RFPercentage(1.3), alignItems: "center", justifyContent: "center", flexDirection: "row", width: RFPercentage(6), height: RFPercentage(6.9), marginVertical: RFPercentage(0.7), borderRadius: RFPercentage(1) }} >
-                    <Text style={{ color: warn ? 'red' : Colors.black, fontSize: RFPercentage(5) }}>
+                    <Text style={{ color: warn ? 'red' : theme.black, fontSize: RFPercentage(5) }}>
                         {(value[1] === "" || value[1] === undefined) ? "" : "*"}
                     </Text>
                 </View>
                 {/* third input */}
                 <View style={{ marginTop: RFPercentage(2), marginRight: RFPercentage(1.3), alignItems: "center", justifyContent: "center", flexDirection: "row", width: RFPercentage(6), height: RFPercentage(6.9), marginVertical: RFPercentage(0.7), borderRadius: RFPercentage(1) }} >
-                    <Text style={{ color: warn ? 'red' : Colors.black, fontSize: RFPercentage(5) }}>
+                    <Text style={{ color: warn ? 'red' : theme.black, fontSize: RFPercentage(5) }}>
                         {(value[2] === "" || value[2] === undefined) ? "" : "*"}
                     </Text>
                 </View>
                 {/* fourth input */}
                 <View style={{ marginTop: RFPercentage(2), marginRight: RFPercentage(1.3), alignItems: "center", justifyContent: "center", flexDirection: "row", width: RFPercentage(6), height: RFPercentage(6.9), marginVertical: RFPercentage(0.7), borderRadius: RFPercentage(1) }} >
-                    <Text style={{ color: warn ? 'red' : Colors.black, fontSize: RFPercentage(5) }}>
+                    <Text style={{ color: warn ? 'red' : theme.black, fontSize: RFPercentage(5) }}>
                         {(value[3] === "" || value[3] === undefined) ? "" : "*"}
                     </Text>
                 </View>
                 {/* fifth input */}
                 <View style={{ marginTop: RFPercentage(2), marginRight: RFPercentage(1.3), alignItems: "center", justifyContent: "center", flexDirection: "row", width: RFPercentage(6), height: RFPercentage(6.9), marginVertical: RFPercentage(0.7), borderRadius: RFPercentage(1) }} >
-                    <Text style={{ color: warn ? 'red' : Colors.black, fontSize: RFPercentage(5) }}>
+                    <Text style={{ color: warn ? 'red' : theme.black, fontSize: RFPercentage(5) }}>
                         {(value[4] === "" || value[4] === undefined) ? "" : "*"}
                     </Text>
                 </View>
                 {/* sixth input */}
                 <View style={{ marginTop: RFPercentage(2), marginRight: RFPercentage(1.3), alignItems: "center", justifyContent: "center", flexDirection: "row", width: RFPercentage(6), height: RFPercentage(6.9), marginVertical: RFPercentage(0.7), borderRadius: RFPercentage(1) }} >
-                    <Text style={{ color: warn ? 'red' : Colors.black, fontSize: RFPercentage(5) }}>
+                    <Text style={{ color: warn ? 'red' : theme.black, fontSize: RFPercentage(5) }}>
                         {(value[5] === "" || value[5] === undefined) ? "" : "*"}
                     </Text>
                 </View>
             </View>
 
             {/* Keypad */}
-            <View style={{ width: '100%', height: RFPercentage(53), position: 'absolute', bottom: 0, backgroundColor: Colors.white }}>
+            <View style={{ width: '100%', height: RFPercentage(53), position: 'absolute', bottom: 0, backgroundColor: theme.white }}>
 
                 {/* First row */}
                 <View style={{ marginTop: RFPercentage(6), width: '80%', flexDirection: 'row', alignSelf: 'center', justifyContent: 'center', alignItems: 'center' }}>
                     <TouchableOpacity style={{ position: 'absolute', left: 0 }} >
-                        <Text onPress={() => handleChange('1')} style={{ fontFamily: 'DMSans_700Bold', color: Colors.keypad, fontSize: RFPercentage(3.4) }}>
+                        <Text onPress={() => handleChange('1')} style={{ fontFamily: 'DMSans_700Bold', color: theme.keypad, fontSize: RFPercentage(3.4) }}>
                             1
                         </Text>
                     </TouchableOpacity>
                     <TouchableOpacity >
-                        <Text onPress={() => handleChange('2')} style={{ fontFamily: 'DMSans_700Bold', color: Colors.keypad, fontSize: RFPercentage(3.4) }}>
+                        <Text onPress={() => handleChange('2')} style={{ fontFamily: 'DMSans_700Bold', color: theme.keypad, fontSize: RFPercentage(3.4) }}>
                             2
                         </Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={{ position: 'absolute', right: 0 }}>
-                        <Text onPress={() => handleChange('3')} style={{ fontFamily: 'DMSans_700Bold', color: Colors.keypad, fontSize: RFPercentage(3.4) }}>
+                        <Text onPress={() => handleChange('3')} style={{ fontFamily: 'DMSans_700Bold', color: theme.keypad, fontSize: RFPercentage(3.4) }}>
                             3
                         </Text>
                     </TouchableOpacity>
@@ -144,17 +144,17 @@ function OtpScreens(props) {
                 {/* second row */}
                 <View style={{ marginTop: RFPercentage(6), width: '80%', flexDirection: 'row', alignSelf: 'center', justifyContent: 'center', alignItems: 'center' }}>
                     <TouchableOpacity style={{ position: 'absolute', left: 0 }} >
-                        <Text onPress={() => handleChange('4')} style={{ fontFamily: 'DMSans_700Bold', color: Colors.keypad, fontSize: RFPercentage(3.4) }}>
+                        <Text onPress={() => handleChange('4')} style={{ fontFamily: 'DMSans_700Bold', color: theme.keypad, fontSize: RFPercentage(3.4) }}>
                             4
                         </Text>
                     </TouchableOpacity>
                     <TouchableOpacity >
-                        <Text onPress={() => handleChange('5')} style={{ fontFamily: 'DMSans_700Bold', color: Colors.keypad, fontSize: RFPercentage(3.4) }}>
+                        <Text onPress={() => handleChange('5')} style={{ fontFamily: 'DMSans_700Bold', color: theme.keypad, fontSize: RFPercentage(3.4) }}>
                             5
                         </Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={{ position: 'absolute', right: 0 }} >
-                        <Text onPress={() => handleChange('6')} style={{ fontFamily: 'DMSans_700Bold', color: Colors.keypad, fontSize: RFPercentage(3.4) }}>
+                        <Text onPress={() => handleChange('6')} style={{ fontFamily: 'DMSans_700Bold', color: theme.keypad, fontSize: RFPercentage(3.4) }}>
                             6
                         </Text>
                     </TouchableOpacity>
@@ -163,17 +163,17 @@ function OtpScreens(props) {
                 {/* third row */}
                 <View style={{ marginTop: RFPercentage(6), width: '80%', flexDirection: 'row', alignSelf: 'center', justifyContent: 'center', alignItems: 'center' }}>
                     <TouchableOpacity style={{ position: 'absolute', left: 0 }} >
-                        <Text onPress={() => handleChange('7')} style={{ fontFamily: 'DMSans_700Bold', color: Colors.keypad, fontSize: RFPercentage(3.4) }}>
+                        <Text onPress={() => handleChange('7')} style={{ fontFamily: 'DMSans_700Bold', color: theme.keypad, fontSize: RFPercentage(3.4) }}>
                             7
                         </Text>
                     </TouchableOpacity>
                     <TouchableOpacity >
-                        <Text onPress={() => handleChange('8')} style={{ fontFamily: 'DMSans_700Bold', color: Colors.keypad, fontSize: RFPercentage(3.4) }}>
+                        <Text onPress={() => handleChange('8')} style={{ fontFamily: 'DMSans_700Bold', color: theme.keypad, fontSize: RFPercentage(3.4) }}>
                             8
                         </Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={{ position: 'absolute', right: 0 }} >
-                        <Text onPress={() => handleChange('9')} style={{ fontFamily: 'DMSans_700Bold', color: Colors.keypad, fontSize: RFPercentage(3.4) }}>
+                        <Text onPress={() => handleChange('9')} style={{ fontFamily: 'DMSans_700Bold', color: theme.keypad, fontSize: RFPercentage(3.4) }}>
                             9
                         </Text>
                     </TouchableOpacity>
@@ -183,12 +183,12 @@ function OtpScreens(props) {
                 <View style={{ marginTop: RFPercentage(6), width: '80%', flexDirection: 'row', alignSelf: 'center', justifyContent: 'center', alignItems: 'center' }}>
                     <TouchableOpacity style={{ position: 'absolute', left: 0 }}  >
                         {/* Dummy entry */}
-                        <Text style={{ color: Colors.white, fontSize: RFPercentage(3.4) }}>
+                        <Text style={{ color: theme.white, fontSize: RFPercentage(3.4) }}>
                             1
                         </Text>
                     </TouchableOpacity>
                     <TouchableOpacity  >
-                        <Text onPress={() => handleChange('0')} style={{ fontFamily: 'DMSans_700Bold', color: Colors.keypad, fontSize: RFPercentage(3.4) }}>
+                        <Text onPress={() => handleChange('0')} style={{ fontFamily: 'DMSans_700Bold', color: theme.keypad, fontSize: RFPercentage(3.4) }}>
                             0
                         </Text>
                     </TouchableOpacity>
