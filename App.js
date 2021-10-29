@@ -10,13 +10,14 @@ import AccountAddress from './app/screens/AccountAddress';
 import HelpScreen from './app/screens/HelpScreen';
 
 //custom fonts
-import { Rubik_500Medium, Rubik_400Regular, useFonts } from "@expo-google-fonts/rubik"
+import { Rubik_500Medium, Rubik_400Regular, Rubik_700Bold, useFonts } from "@expo-google-fonts/rubik"
 import { DMSans_700Bold, DMSans_700Bold_Italic } from "@expo-google-fonts/dm-sans"
 
 //config
 import Colors from './app/config/Colors';
 import PinSuccessScreen from './app/screens/PinSuccessScreen';
 import ContactSupportScreen from './app/screens/ContactSupportScreen';
+import SettingsScreen from './app/screens/SettingsScreen';
 
 const Stack = createStackNavigator();
 
@@ -25,6 +26,7 @@ export default function App() {
   const [fontsLoaded] = useFonts({
     Rubik_500Medium,
     Rubik_400Regular,
+    Rubik_700Bold,
     DMSans_700Bold,
     DMSans_700Bold_Italic
   })
@@ -37,6 +39,7 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator headerMode="none" initialRouteName="OtpScreens">
         <Stack.Screen name="OtpScreens" component={OtpScreens} />
+        <Stack.Screen name="SettingsScreen" component={SettingsScreen} />
         <Stack.Screen name="HelpScreen" component={HelpScreen} />
         <Stack.Screen name="ContactSupportScreen" component={ContactSupportScreen} />
         <Stack.Screen name="PinSuccessScreen" component={PinSuccessScreen} />

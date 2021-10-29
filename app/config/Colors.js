@@ -10,6 +10,6 @@ export default {
     lightBlue: '#C0FAEB',
     warn: "#ba4848",
     lightGrey: '#F3EBFC',
-    line: '#444444',
+    line: '#d1c8c8',
     keypad: '#1C1939'
 };
