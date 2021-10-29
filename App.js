@@ -11,6 +11,7 @@ import HelpScreen from './app/screens/HelpScreen';
 
 //custom fonts
 import { Rubik_500Medium, Rubik_400Regular, useFonts } from "@expo-google-fonts/rubik"
+import { DMSans_700Bold, DMSans_700Bold_Italic } from "@expo-google-fonts/dm-sans"
 
 //config
 import Colors from './app/config/Colors';
@@ -23,7 +24,9 @@ export default function App() {
 
   const [fontsLoaded] = useFonts({
     Rubik_500Medium,
-    Rubik_400Regular
+    Rubik_400Regular,
+    DMSans_700Bold,
+    DMSans_700Bold_Italic
   })
 
   if (!fontsLoaded) return <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }} >
@@ -32,7 +35,7 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator headerMode="none" initialRouteName="PinSuccessScreen">
+      <Stack.Navigator headerMode="none" initialRouteName="OtpScreens">
         <Stack.Screen name="OtpScreens" component={OtpScreens} />
         <Stack.Screen name="HelpScreen" component={HelpScreen} />
         <Stack.Screen name="ContactSupportScreen" component={ContactSupportScreen} />

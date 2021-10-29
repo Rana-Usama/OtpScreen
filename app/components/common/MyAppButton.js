@@ -37,7 +37,7 @@ function MyAppButton({
             }}
         >
             <LinearGradient colors={gradColor} start={[0.1, 0.3]} end={[1, 0.2]} style={{
-                alignItems: "center", justifyContent: "center", padding: padding, width: "100%", borderRadius: borderradius, flexDirection: "row"
+                alignSelf: 'center', alignItems: "center", justifyContent: 'center', borderRadius: RFPercentage(3), width: "100%", height: RFPercentage(6.5)
             }} >
                 <Text
                     style={{
