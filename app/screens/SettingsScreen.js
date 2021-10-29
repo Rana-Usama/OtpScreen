@@ -55,7 +55,7 @@ function SettingsScreen(props) {
                     </Text>
                     <View style={{ width: '100%', height: RFPercentage(0.1), backgroundColor: Colors.line, marginTop: RFPercentage(2.8) }} />
 
-                    <Text style={{ marginTop: RFPercentage(5), marginLeft: RFPercentage(6), color: Colors.darkBlue, fontSize: RFPercentage(2.6), fontFamily: 'Rubik_700Bold' }}>
+                    <Text style={{ marginTop: RFPercentage(10), marginLeft: RFPercentage(6), color: Colors.darkBlue, fontSize: RFPercentage(2.6), fontFamily: 'Rubik_700Bold' }}>
                         Security and Data
                     </Text>
                     <View style={{ width: '100%', height: RFPercentage(0.1), backgroundColor: Colors.line, marginTop: RFPercentage(2.4) }} />
@@ -93,7 +93,7 @@ function SettingsScreen(props) {
                         </View>
                     </View>
 
-                    <Text style={{ marginTop: RFPercentage(5), marginLeft: RFPercentage(6), color: Colors.darkBlue, fontSize: RFPercentage(2.6), fontFamily: 'Rubik_700Bold' }}>
+                    <Text style={{ marginTop: RFPercentage(12), marginLeft: RFPercentage(6), color: Colors.darkBlue, fontSize: RFPercentage(2.6), fontFamily: 'Rubik_700Bold' }}>
                         Legal
                     </Text>
                     <View style={{ width: '100%', height: RFPercentage(0.08), backgroundColor: Colors.line, marginTop: RFPercentage(2) }} />
@@ -110,11 +110,11 @@ function SettingsScreen(props) {
                     </Text>
                     <View style={{ width: '100%', height: RFPercentage(0.1), backgroundColor: Colors.line, marginTop: RFPercentage(2.8) }} />
 
-                    <Text style={{ marginTop: RFPercentage(8), marginLeft: RFPercentage(6), color: Colors.darkBlue, fontSize: RFPercentage(2.6), fontFamily: 'Rubik_400Regular' }}>
+                    <Text style={{ marginTop: RFPercentage(6), marginLeft: RFPercentage(6), color: Colors.darkBlue, fontSize: RFPercentage(2.6), fontFamily: 'Rubik_400Regular' }}>
                         Reset Wakala
                     </Text>
 
-                    <View style={{ marginBottom: RFPercentage(15), marginTop: RFPercentage(4), alignSelf: 'center', width: '80%', justifyContent: 'center', alignItems: 'flex-start' }}>
+                    <View style={{ marginBottom: RFPercentage(15), marginTop: RFPercentage(3), alignSelf: 'center', width: '80%', justifyContent: 'center', alignItems: 'flex-start' }}>
                         <Text style={{ color: '#333333', fontFamily: 'Rubik_400Regular' }}>
                             Resetting will remove your account from this device. Your funds will remian in the acount, but will only be accessible with your account key.
                         </Text>
