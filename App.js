@@ -19,6 +19,7 @@ import { DMSans_700Bold, DMSans_700Bold_Italic } from "@expo-google-fonts/dm-san
 
 //config
 import theme from './app/config/theme';
+import ContactScreen from './app/screens/ContactScreen';
 
 const Stack = createStackNavigator();
 
@@ -38,8 +39,9 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator headerMode="none" initialRouteName="SelectCurrencyScreen">
+      <Stack.Navigator headerMode="none" initialRouteName="ContactScreen">
         <Stack.Screen name="OtpScreens" component={OtpScreens} />
+        <Stack.Screen name="ContactScreen" component={ContactScreen} />
         <Stack.Screen name="SelectCurrencyScreen" component={SelectCurrencyScreen} />
         <Stack.Screen name="SettingsScreen" component={SettingsScreen} />
         <Stack.Screen name="HelpScreen" component={HelpScreen} />
