@@ -11,6 +11,7 @@ import HelpScreen from './app/screens/HelpScreen';
 import PinSuccessScreen from './app/screens/PinSuccessScreen';
 import ContactSupportScreen from './app/screens/ContactSupportScreen';
 import SettingsScreen from './app/screens/SettingsScreen';
+import SelectCurrencyScreen from './app/screens/SelectCurrencyScreen';
 
 //custom fonts
 import { Rubik_500Medium, Rubik_400Regular, Rubik_700Bold, useFonts } from "@expo-google-fonts/rubik"
@@ -37,8 +38,9 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator headerMode="none" initialRouteName="AccountAddress">
+      <Stack.Navigator headerMode="none" initialRouteName="SelectCurrencyScreen">
         <Stack.Screen name="OtpScreens" component={OtpScreens} />
+        <Stack.Screen name="SelectCurrencyScreen" component={SelectCurrencyScreen} />
         <Stack.Screen name="SettingsScreen" component={SettingsScreen} />
         <Stack.Screen name="HelpScreen" component={HelpScreen} />
         <Stack.Screen name="ContactSupportScreen" component={ContactSupportScreen} />
