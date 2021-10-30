@@ -43,7 +43,7 @@ function ResetAccountScreen(props) {
             {/* Model */}
             <Modal visible={pickerModel} transparent={true} >
 
-                <LinearGradient colors={['#F7EFFA', '#FCF8ED']} start={[1, 1]} end={[1, 0.2]} style={{ borderTopLeftRadius: RFPercentage(4), borderTopRightRadius: RFPercentage(4), position: 'absolute', bottom: 0, alignSelf: 'center', alignItems: "center", justifyContent: 'flex-start', width: "100%", height: RFPercentage(60) }} >
+                <LinearGradient colors={['#F7EFFA', '#FCF8ED']} start={[1, 0.7]} end={[1, 0.1]} style={{ borderTopLeftRadius: RFPercentage(4), borderTopRightRadius: RFPercentage(4), position: 'absolute', bottom: 0, alignSelf: 'center', alignItems: "center", justifyContent: 'flex-start', width: "100%", height: RFPercentage(60) }} >
 
                     <View style={{ marginTop: RFPercentage(7), alignSelf: 'center', justifyContent: 'center', alignItems: 'center' }}>
                         <Text style={{ color: "#333333", fontFamily: 'Rubik_500Medium', fontSize: RFPercentage(2.6) }}>

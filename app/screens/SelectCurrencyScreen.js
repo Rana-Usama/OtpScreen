@@ -89,7 +89,7 @@ function SelectCurrencyScreen(props) {
                         <View style={{ marginLeft: RFPercentage(5), marginBottom: RFPercentage(1) }}>
                             <RadioButtonRN
                                 data={data}
-                                // deactiveColor={theme.white}
+                                deactiveColor={theme.grey}
                                 activeColor={theme.darkBlue}
                                 box={false}
                                 selectedBtn={(e) => console.log(e)}
@@ -110,6 +110,7 @@ function SelectCurrencyScreen(props) {
                                     <RadioButtonRN
                                         data={data}
                                         // deactiveColor={theme.white}
+                                        deactiveColor={theme.grey}
                                         activeColor={theme.darkBlue}
                                         box={false}
                                         selectedBtn={(e) => console.log(e)}
