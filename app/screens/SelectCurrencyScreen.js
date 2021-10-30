@@ -13,62 +13,84 @@ import theme from '../config/theme';
 
 function SelectCurrencyScreen(props) {
 
-    const data = [
+    const [list, setList] = useState([
         {
-            label: ' '
+            currencyText: 'USD',
+            enable: "unchecked",
         },
+        {
+            currencyText: 'KES',
+            enable: "unchecked",
+        },
+        {
+            currencyText: 'CAD',
+            enable: "unchecked",
+        },
+        {
+            currencyText: 'EUR',
+            enable: "unchecked",
+        },
+        {
+            currencyText: 'MXN',
+            enable: "unchecked",
+        },
+        {
+            currencyText: 'COP',
+            enable: "unchecked",
+        },
+        {
+            currencyText: 'UGX',
+            enable: "unchecked",
+        },
+        {
+            currencyText: 'CAD',
+            enable: "unchecked",
+        },
+        {
+            currencyText: 'BRL',
+            enable: "unchecked",
+        },
+        {
+            currencyText: 'CVE',
+            enable: "unchecked",
+        },
+        {
+            currencyText: 'EUR',
+            enable: "unchecked",
+        },
+        {
+            currencyText: 'MXN',
+            enable: "unchecked",
+        },
+        {
+            currencyText: 'COP',
+            enable: "unchecked",
+        },
+        {
+            currencyText: 'USD',
+            enable: "unchecked",
+        },
+    ]);
 
-    ];
-
-    const list = [
-
-
-        {
-            currencyText: 'KES'
-        },
-        {
-            currencyText: 'CAD'
-        },
-        {
-            currencyText: 'EUR'
-        },
-        {
-            currencyText: 'MXN'
-        },
-        {
-            currencyText: 'COP'
-        },
-        {
-            currencyText: 'UGX'
-        },
-        {
-            currencyText: 'CAD'
-        },
-        {
-            currencyText: 'BRL'
-        },
-        {
-            currencyText: 'CVE'
-        },
-        {
-            currencyText: 'EUR'
-        },
-        {
-            currencyText: 'MXN'
-        },
-        {
-            currencyText: 'COP'
-        },
-        {
-            currencyText: 'USD'
-        },
-    ]
+    const handleCurrency = (index) => {
+        const tempList = [...list];
+        let tempList2 = [];
+        for (let i = 0; i < tempList.length; i++) {
+            if (i === index) {
+                tempList[i].enable = "checked";
+            } else {
+                tempList[i].enable = "unchecked";
+            }
+            tempList2.push(tempList[i])
+        }
+        setList(tempList2)
+    }
 
     return (
-        <Screen statusBarColor="#E5E5E5" style={{ flex: 1, justifyContent: 'flex-start', alignItems: "center", backgroundColor: "#F5F5F5" }}>
+        <Screen statusBarColor="#F5F5F5" style={{ flex: 1, justifyContent: 'flex-start', alignItems: "center", backgroundColor: "#F5F5F5" }}>
 
             {/* Nav */}
-            <View style={{ width: '100%', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginTop: RFPercentage(2) }}>
+            <View style={{ width: '100%', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', marginTop: RFPercentage(4) }}>
 
                 {/* Back Icon */}
                 <Ionicons name="chevron-back" style={{ fontSize: RFPercentage(3.2), position: 'absolute', left: RFPercentage(2) }} color={theme.darkBlue} />
@@ -80,23 +102,6 @@ function SelectCurrencyScreen(props) {
 
             <ScrollView style={{ flex: 1, width: '100%' }} >
                 <View style={{ justifyContent: 'center', alignItems: 'flex-start', width: '100%', marginTop: RFPercentage(1) }}>
-
-                    <View style={{ width: '100%', height: RFPercentage(0.1), backgroundColor: theme.line, marginTop: RFPercentage(7) }} />
-                    <View style={{ marginTop: RFPercentage(3), width: '80%', flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center', alignSelf: 'center' }}>
-                        <Text style={{ marginLeft: RFPercentage(2), color: theme.darkBlue, fontSize: RFPercentage(2.6), fontFamily: 'Rubik_400Regular' }}>
-                            USD
-                        </Text>
-                        <View style={{ marginLeft: RFPercentage(5), marginBottom: RFPercentage(1) }}>
-                            <RadioButtonRN
-                                data={data}
-                                deactiveColor={theme.grey}
-                                activeColor={theme.darkBlue}
-                                box={false}
-                                selectedBtn={(e) => console.log(e)}
-                            />
-
-                        </View>
-                    </View>
                     <View style={{ width: '100%', height: RFPercentage(0.1), backgroundColor: theme.line, marginTop: RFPercentage(3) }} />
 
                     {list.map((item, i) => (
@@ -106,16 +111,13 @@ function SelectCurrencyScreen(props) {
                                 <Text style={{ marginLeft: RFPercentage(2), color: theme.darkBlue, fontSize: RFPercentage(2.6), fontFamily: 'Rubik_400Regular' }}>
                                     {item.currencyText}
                                 </Text>
-                                <View style={{ marginLeft: RFPercentage(5), marginBottom: RFPercentage(1) }}>
-                                    <RadioButtonRN
-                                        data={data}
-                                        // deactiveColor={theme.white}
-                                        deactiveColor={theme.grey}
-                                        activeColor={theme.darkBlue}
-                                        box={false}
-                                        selectedBtn={(e) => console.log(e)}
+                                <View style={{ marginLeft: RFPercentage(5) }}>
+                                    <RadioButton
+                                        value="first"
+                                        color={theme.primary}
+                                        status={item.enable}
+                                        onPress={() => handleCurrency(i)}
                                     />
-
                                 </View>
                             </View>
                             <View style={{ width: '100%', height: RFPercentage(0.1), backgroundColor: theme.line, marginTop: RFPercentage(3) }} />

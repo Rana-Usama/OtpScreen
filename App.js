@@ -40,7 +40,7 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator headerMode="none" initialRouteName="SelectCurrencyScreen">
+      <Stack.Navigator headerMode="none" initialRouteName="ContactScreen">
         <Stack.Screen name="OtpScreens" component={OtpScreens} />
         <Stack.Screen name="ResetAccountScreen" component={ResetAccountScreen} />
         <Stack.Screen name="ContactScreen" component={ContactScreen} />
