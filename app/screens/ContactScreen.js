@@ -8,7 +8,6 @@ import Screen from './../components/Screen';
 
 //config
 import theme from '../config/theme';
-import { Rubik_500Medium, Rubik_400Regular } from '@expo-google-fonts/rubik';
 
 function ContactScreen(props) {
     return (

@@ -12,6 +12,8 @@ import PinSuccessScreen from './app/screens/PinSuccessScreen';
 import ContactSupportScreen from './app/screens/ContactSupportScreen';
 import SettingsScreen from './app/screens/SettingsScreen';
 import SelectCurrencyScreen from './app/screens/SelectCurrencyScreen';
+import ContactScreen from './app/screens/ContactScreen';
+import ResetAccountScreen from './app/screens/ResetAccountScreen';
 
 //custom fonts
 import { Rubik_500Medium, Rubik_400Regular, Rubik_700Bold, useFonts } from "@expo-google-fonts/rubik"
@@ -19,7 +21,6 @@ import { DMSans_700Bold, DMSans_700Bold_Italic } from "@expo-google-fonts/dm-san
 
 //config
 import theme from './app/config/theme';
-import ContactScreen from './app/screens/ContactScreen';
 
 const Stack = createStackNavigator();
 
@@ -39,8 +40,9 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator headerMode="none" initialRouteName="ContactScreen">
+      <Stack.Navigator headerMode="none" initialRouteName="SelectCurrencyScreen">
         <Stack.Screen name="OtpScreens" component={OtpScreens} />
+        <Stack.Screen name="ResetAccountScreen" component={ResetAccountScreen} />
         <Stack.Screen name="ContactScreen" component={ContactScreen} />
         <Stack.Screen name="SelectCurrencyScreen" component={SelectCurrencyScreen} />
         <Stack.Screen name="SettingsScreen" component={SettingsScreen} />
