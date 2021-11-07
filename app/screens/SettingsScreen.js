@@ -1,14 +1,11 @@
 import React, { useState } from 'react';
-import { View, Text, Image, ScrollView, Switch } from 'react-native'
+import { View, Text, Image, ScrollView, Switch, TouchableOpacity } from 'react-native'
 import { RFPercentage } from 'react-native-responsive-fontsize';
 
 //components
 import Screen from './../components/Screen';
 //config
 import theme from '../config/theme';
-import { Rubik_500Medium } from '@expo-google-fonts/rubik';
-import { Rubik_700Bold } from '@expo-google-fonts/rubik';
-import { Rubik_400Regular } from '@expo-google-fonts/rubik';
 
 function SettingsScreen(props) {
 
@@ -50,9 +47,11 @@ function SettingsScreen(props) {
                         Account Address
                     </Text>
                     <View style={{ width: '100%', height: RFPercentage(0.1), backgroundColor: theme.line, marginTop: RFPercentage(2.8) }} />
-                    <Text style={{ marginTop: RFPercentage(2.6), marginLeft: RFPercentage(6), color: theme.darkBlue, fontSize: RFPercentage(2.6), fontFamily: 'Rubik_400Regular' }}>
-                        Recovery Phrase
-                    </Text>
+                    <TouchableOpacity activeOpacity={0.6} onPress={() => props.navigation.navigate("RecoveryPhrase")} >
+                        <Text style={{ marginTop: RFPercentage(2.6), marginLeft: RFPercentage(6), color: theme.darkBlue, fontSize: RFPercentage(2.6), fontFamily: 'Rubik_400Regular' }}>
+                            Recovery Phrase
+                        </Text>
+                    </TouchableOpacity>
                     <View style={{ width: '100%', height: RFPercentage(0.1), backgroundColor: theme.line, marginTop: RFPercentage(2.8) }} />
 
                     <Text style={{ marginTop: RFPercentage(10), marginLeft: RFPercentage(6), color: theme.darkBlue, fontSize: RFPercentage(2.6), fontFamily: 'Rubik_700Bold' }}>
